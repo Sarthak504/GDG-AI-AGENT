@@ -62,7 +62,7 @@ class GeminiWrapper:
         # Get API key
         # ✏️ FILL IN: Replace ___ so it uses api_key if given, otherwise reads GEMINI_API_KEY from environment
         # 💡 HINT: use "or"  →  self.api_key = api_key or os.getenv('GEMINI_API_KEY')
-        self.api_key = os.getenv('GEMINI_API_KEY') or api_key
+        self.api_key = api_key or os.getenv('GEMINI_API_KEY')
         # ✏️ FILL IN: Replace ___ with the condition that checks the key is missing
         # 💡 HINT: not self.api_key  → True when api_key is None or empty
         if not self.api_key:
